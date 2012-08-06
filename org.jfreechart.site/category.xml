@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.jfreechart.feature_1.0.13.qualifier.jar" id="org.jfreechart.feature" version="1.0.13.qualifier">
+      <category name="org.jfreechart"/>
+   </feature>
+   <category-def name="org.jfreechart" label="JFreeChart"/>
+</site>

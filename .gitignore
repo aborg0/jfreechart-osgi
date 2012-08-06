@@ -1,0 +1,10 @@
+*.jar
+*.class
+
+# 
+.classpath
+.project
+.settings/
+
+# Maven
+target/

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.jfreechart</groupId>
+  <artifactId>jfreechart-osgi</artifactId>
+  <version>1.0.13</version>
+  <packaging>pom</packaging>
+  <properties>
+    <tycho.version>0.15.0</tycho.version>
+    <wagon.version>1.0-beta-6</wagon.version>
+  </properties>
+  <modules>
+    <module>org.jfreechart</module>
+    <module>org.jfreechart.feature</module>
+    <module>org.jfreechart.site</module>
+  </modules>
+
+  <distributionManagement>
+    <repository>
+      <id>ftp-repository</id>
+      <url>ftp://mukis.de</url>
+    </repository>
+  </distributionManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho.version}</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  <!-- Enabling the use of FTP -->
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+         <artifactId>wagon-ftp</artifactId>
+         <version>${wagon.version}</version>
+      </extension>
+    </extensions>
+  </build>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>tycho-snapshots</id>
+			<url>https://oss.sonatype.org/content/groups/public/</url>
+		</pluginRepository>
+	</pluginRepositories>
+<repositories>
+		<!-- Eclipse repositories -->
+		<repository>
+			<id>eclipse-indigo</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/releases/indigo</url>
+		</repository>
+
+	</repositories>
+</project>
