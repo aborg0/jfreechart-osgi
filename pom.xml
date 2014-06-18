@@ -7,8 +7,9 @@
   <version>1.0.13</version>
   <packaging>pom</packaging>
   <properties>
-    <tycho.version>0.15.0</tycho.version>
-    <wagon.version>1.0-beta-6</wagon.version>
+    <tycho.version>0.20.0</tycho.version>
+    <wagon.version>2.6</wagon.version>
+    <jfreechart.version>1.0.17</jfreechart.version>
   </properties>
   <modules>
     <module>org.jfreechart</module>
@@ -20,15 +21,15 @@
         <!-- use the following if you're not using a snapshot version. -->
     <repository>
       <id>nexus</id>
-      <name>RepositoryProxy</name>
-      <url>http://metropolis:8081/nexus/content/repositories/thirdparty</url>
+      <name>central</name>
+      <url>http://repo1.maven.org/maven2/</url>
     </repository>
         <!-- use the following if you ARE using a snapshot version. -->
-    <snapshotRepository>
+    <!-- snapshotRepository>
       <id>nexus</id>
       <name>RepositoryProxy</name>
       <url>http://metropolis:8081/nexus/content/repositories/snapshots</url>
-    </snapshotRepository>
+    </snapshotRepository-->
   </distributionManagement>
 
   <build>
